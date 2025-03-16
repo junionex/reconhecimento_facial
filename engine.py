@@ -18,9 +18,9 @@ def get_rostos():
         rostos_conhecidos.append(junior[1][0])
         nomes_dos_rostos.append("Junior")
 
-    cecilia = reconhece_face("./img/cecilia.jpg")
+    """cecilia = reconhece_face("./img/cecilia.jpg")
     if(cecilia[0]):
         rostos_conhecidos.append(cecilia[1][0])
-        nomes_dos_rostos.append("Cecilia")
+        nomes_dos_rostos.append("Cecilia")"""
     
     return rostos_conhecidos, nomes_dos_rostos
