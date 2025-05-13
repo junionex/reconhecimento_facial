@@ -30,9 +30,6 @@ while True:
     if not localizacao_dos_rostos:
         print("Nenhum rosto encontrado")
         cv2.imshow('Webcam_facerecognition', frame)
-        if cv2.waitKey(1) == 27:
-            break
-        continue
 
     # Obter as codificações dos rostos
     try:

@@ -13,7 +13,7 @@ def get_rostos():
     rostos_conhecidos = []
     nomes_dos_rostos = []
 
-    junior = reconhece_face("./img/junior.jpg")
+    junior = reconhece_face("./img_com_o_rosto_para_ser_verificado/junior.jpg")
     if(junior[0]):
         rostos_conhecidos.append(junior[1][0])
         nomes_dos_rostos.append("Junior")

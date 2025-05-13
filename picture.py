@@ -1,17 +1,21 @@
 import face_recognition as fr
 from engine import reconhece_face, get_rostos
 
-desconhecido = reconhece_face("./img/cecilia.jpg")
-if(desconhecido[0]):
-    rosto_desconhecido = desconhecido[1][0]
-    rostos_conhecidos, nomes_dos_rostos = get_rostos()
-    resultados = fr.compare_faces(rostos_conhecidos, rosto_desconhecido)
-    print(resultados)
+def buscarRostos(url_arquivo):
+    desconhecido = reconhece_face("./img/"+url_arquivo)
+    print("Foram detectados " + str(len(desconhecido[1])) + " faces")
+    if(desconhecido[0]):
+        for j in range(len(desconhecido[1])):
+            rosto_desconhecido = desconhecido[1][j]
+            rostos_conhecidos, nomes_dos_rostos = get_rostos()
+            resultados = fr.compare_faces(rostos_conhecidos, rosto_desconhecido)
+            print(resultados)
 
-    for i in range(len(rostos_conhecidos)):
-        resultado = resultados[i]
-        if(resultado):
-            print("Rosto do", nomes_dos_rostos[i], "foi reconhecido")
+            for i in range(len(rostos_conhecidos)):
+                resultado = resultados[i]
+                if(resultado):
+                    print("Rosto do", nomes_dos_rostos[i], "foi reconhecido")
 
-else:
-    print("Nao foi encontrado nenhum rosto")
+    else:
+        print("Nao foi encontrado nenhum rosto")
+
