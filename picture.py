@@ -9,7 +9,8 @@ def buscarRostos(url_arquivo):
         for j in range(len(desconhecido[1])):
             rosto_desconhecido = desconhecido[1][j]
             rostos_conhecidos, nomes_dos_rostos = get_rostos()
-            resultados = fr.compare_faces(rostos_conhecidos, rosto_desconhecido)
+            #tolerance 0.6 por padrão, quanto menor mais rigorosa é a comparação
+            resultados = fr.compare_faces(rostos_conhecidos, rosto_desconhecido, tolerance=0.4)
             print(resultados)
 
             for i in range(len(rostos_conhecidos)):

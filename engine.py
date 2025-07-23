@@ -3,7 +3,9 @@ import cv2
 
 def reconhece_face(url_foto):
     foto = fr.load_image_file(url_foto)
-    rostos = fr.face_encodings(foto)
+    #num_jitters aumenta a precisão da codificação do rosto
+    #quanto maior o número, mais preciso, mas mais lento por padrão ele é 1
+    rostos = fr.face_encodings(foto, num_jitters=4)
     if(len(rostos) > 0):
         return True, rostos
     
