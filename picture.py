@@ -1,5 +1,6 @@
 import face_recognition as fr
 from engine import reconhece_face, get_rostos
+from pathlib import Path
 
 def buscarRostos(url_arquivo):
     desconhecido = reconhece_face("./img/"+url_arquivo)
@@ -15,6 +16,9 @@ def buscarRostos(url_arquivo):
                 resultado = resultados[i]
                 if(resultado):
                     print("Rosto do", nomes_dos_rostos[i], "foi reconhecido")
+                    
+                    destino = Path("./img_correspondente_ao_rosto/" + nomes_dos_rostos[i] + "_" + url_arquivo)
+                    destino.write_bytes(Path("./img/"+url_arquivo).read_bytes())
 
     else:
         print("Nao foi encontrado nenhum rosto")
