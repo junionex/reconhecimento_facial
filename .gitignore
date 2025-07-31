@@ -3,3 +3,5 @@ img_com_o_rosto_reconhecido/
 img_correspondente_ao_rosto/
 img_com_o_rosto_para_ser_verificado/
 img_temp/
+_pycache_/
+.vs/

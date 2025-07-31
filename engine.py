@@ -15,14 +15,14 @@ def get_rostos():
     rostos_conhecidos = []
     nomes_dos_rostos = []
 
-    """junior = reconhece_face("./img_com_o_rosto_para_ser_verificado/junior.jpg")
+    junior = reconhece_face("./img_com_o_rosto_para_ser_verificado/junior.jpg")
     if(junior[0]):
         rostos_conhecidos.append(junior[1][0])
-        nomes_dos_rostos.append("Junior")"""
-    vo_natalia = reconhece_face("./img_com_o_rosto_para_ser_verificado/vo_natalia.jpg")
-    if(vo_natalia[0]):
-        rostos_conhecidos.append(vo_natalia[1][0])
-        nomes_dos_rostos.append("Vo_natalia")
+        nomes_dos_rostos.append("Junior")
+#    vo_natalia = reconhece_face("./img_com_o_rosto_para_ser_verificado/vo_natalia.jpg")
+#    if(vo_natalia[0]):
+#        rostos_conhecidos.append(vo_natalia[1][0])
+#        nomes_dos_rostos.append("Vo_natalia")
 
     """cecilia = reconhece_face("./img/cecilia.jpg")
     if(cecilia[0]):
